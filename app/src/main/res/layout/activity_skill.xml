@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SkillActivity">
+    tools:context=".Controller.SkillActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -59,12 +59,13 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5">
 
         <ToggleButton
-            android:id="@+id/toggleButton4"
+            android:id="@+id/beginnerButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="16dp"
             android:layout_weight="1"
             android:background="@drawable/swoosh_toggle"
+            android:onClick="onBeginnerClicked"
             android:text="ToggleButton"
             android:textColor="@android:color/white"
             android:textOff="Beginner"
@@ -72,12 +73,13 @@
             tools:text="Beginner" />
 
         <ToggleButton
-            android:id="@+id/toggleButton5"
+            android:id="@+id/ballerButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
             android:background="@drawable/swoosh_toggle"
+            android:onClick="onBallerClicked"
             android:text="ToggleButton"
             android:textColor="@android:color/white"
             android:textOff="Baller"
@@ -86,7 +88,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/FinishButton"
+        android:id="@+id/finishButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -94,6 +96,7 @@
         android:layout_marginStart="8dp"
         android:background="@drawable/swooshbutton"
         android:fontFamily="@font/montserrat"
+        android:onClick="onFinishedClick"
         android:text="Finish"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
